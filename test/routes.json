@@ -1,0 +1,441 @@
+{
+  "routes": {
+    "_twig_error_test": {
+      "path": "/_error/{code}.{_format}",
+      "host": "",
+      "defaults": {
+        "_controller": "twig.controller.preview_error::previewErrorPageAction",
+        "_format": "html"
+      },
+      "requirements": { "code": "\\d+" },
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["variable", ".", "[^/]++", "_format", true],
+        ["variable", "/", "\\d+", "code", true],
+        ["text", "/_error"]
+      ],
+      "host_tokens": []
+    },
+    "_wdt": {
+      "path": "/_wdt/{token}",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::toolbarAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["variable", "/", "[^/]++", "token", true], ["text", "/_wdt"]],
+      "host_tokens": []
+    },
+    "_profiler_home": {
+      "path": "/_profiler/",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::homeAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/_profiler/"]],
+      "host_tokens": []
+    },
+    "_profiler_search": {
+      "path": "/_profiler/search",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::searchAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/_profiler/search"]],
+      "host_tokens": []
+    },
+    "_profiler_search_bar": {
+      "path": "/_profiler/search_bar",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::searchBarAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/_profiler/search_bar"]],
+      "host_tokens": []
+    },
+    "_profiler_phpinfo": {
+      "path": "/_profiler/phpinfo",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::phpinfoAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/_profiler/phpinfo"]],
+      "host_tokens": []
+    },
+    "_profiler_search_results": {
+      "path": "/_profiler/{token}/search/results",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::searchResultsAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["text", "/search/results"],
+        ["variable", "/", "[^/]++", "token", true],
+        ["text", "/_profiler"]
+      ],
+      "host_tokens": []
+    },
+    "_profiler_open_file": {
+      "path": "/_profiler/open",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::openAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/_profiler/open"]],
+      "host_tokens": []
+    },
+    "_profiler": {
+      "path": "/_profiler/{token}",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.profiler::panelAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["variable", "/", "[^/]++", "token", true],
+        ["text", "/_profiler"]
+      ],
+      "host_tokens": []
+    },
+    "_profiler_router": {
+      "path": "/_profiler/{token}/router",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.router::panelAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["text", "/router"],
+        ["variable", "/", "[^/]++", "token", true],
+        ["text", "/_profiler"]
+      ],
+      "host_tokens": []
+    },
+    "_profiler_exception": {
+      "path": "/_profiler/{token}/exception",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.exception::showAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["text", "/exception"],
+        ["variable", "/", "[^/]++", "token", true],
+        ["text", "/_profiler"]
+      ],
+      "host_tokens": []
+    },
+    "_profiler_exception_css": {
+      "path": "/_profiler/{token}/exception.css",
+      "host": "",
+      "defaults": {
+        "_controller": "web_profiler.controller.exception::cssAction"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["text", "/exception.css"],
+        ["variable", "/", "[^/]++", "token", true],
+        ["text", "/_profiler"]
+      ],
+      "host_tokens": []
+    },
+    "admin": {
+      "path": "/admin",
+      "host": "",
+      "defaults": {
+        "_menu": "admin",
+        "_controller": "App\\Controller\\Administration\\AdministrationController::index"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/admin"]],
+      "host_tokens": []
+    },
+    "admin_ticket_category": {
+      "path": "/admin/ticket/category",
+      "host": "",
+      "defaults": {
+        "_menu": "admin",
+        "_controller": "App\\Controller\\Administration\\Ticket\\TicketCategoryController::index"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/admin/ticket/category"]],
+      "host_tokens": []
+    },
+    "admin_ticket_category_update": {
+      "path": "/admin/ticket/category/update",
+      "host": "",
+      "defaults": {
+        "_menu": "admin",
+        "_controller": "App\\Controller\\Administration\\Ticket\\TicketCategoryController::update"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/admin/ticket/category/update"]],
+      "host_tokens": []
+    },
+    "admin_ticket": {
+      "path": "/admin/ticket",
+      "host": "",
+      "defaults": {
+        "_menu": "admin",
+        "_controller": "App\\Controller\\Administration\\Ticket\\TicketController::index"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/admin/ticket"]],
+      "host_tokens": []
+    },
+    "client_view": {
+      "path": "/client/{id}",
+      "host": "",
+      "defaults": {
+        "_menu": "default",
+        "_controller": "App\\Controller\\Client\\ClientController::view"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["variable", "/", "[^/]++", "id", true], ["text", "/client"]],
+      "host_tokens": []
+    },
+    "client_card": {
+      "path": "/client/card/{id}",
+      "host": "",
+      "defaults": {
+        "_menu": "default",
+        "_controller": "App\\Controller\\Client\\ClientController::card"
+      },
+      "requirements": { "id": "\\d+" },
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["variable", "/", "\\d+", "id", true],
+        ["text", "/client/card"]
+      ],
+      "host_tokens": []
+    },
+    "site_card": {
+      "path": "/site/card/{id}",
+      "host": "",
+      "defaults": {
+        "_menu": "default",
+        "id": -1,
+        "_controller": "App\\Controller\\Client\\SiteController::card"
+      },
+      "requirements": { "id": "\\d+" },
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["variable", "/", "\\d+", "id", true], ["text", "/site/card"]],
+      "host_tokens": []
+    },
+    "error": {
+      "path": "/error",
+      "host": "",
+      "defaults": {
+        "_controller": "App\\Controller\\ExceptionController::index"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/error"]],
+      "host_tokens": []
+    },
+    "index": {
+      "path": "/",
+      "host": "",
+      "defaults": { "_controller": "App\\Controller\\IndexController::index" },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/"]],
+      "host_tokens": []
+    },
+    "dashboard": {
+      "path": "/dashboard",
+      "host": "",
+      "defaults": {
+        "_controller": "App\\Controller\\IndexController::dashboard"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/dashboard"]],
+      "host_tokens": []
+    },
+    "login": {
+      "path": "/login",
+      "host": "",
+      "defaults": {
+        "_controller": "App\\Controller\\SecurityController::login"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/login"]],
+      "host_tokens": []
+    },
+    "logout": {
+      "path": "/logout",
+      "host": "",
+      "defaults": {
+        "_controller": "App\\Controller\\SecurityController::logout"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/logout"]],
+      "host_tokens": []
+    },
+    "classification_get_priority": {
+      "path": "/ticket/classification/priority",
+      "host": "",
+      "defaults": {
+        "_menu": "default",
+        "_controller": "App\\Controller\\Ticket\\ClassificationController::getPriority"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/ticket/classification/priority"]],
+      "host_tokens": []
+    },
+    "ticket_new": {
+      "path": "/ticket/new",
+      "host": "",
+      "defaults": {
+        "_menu": "default",
+        "_controller": "App\\Controller\\Ticket\\TicketController::new"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["text", "/ticket/new"]],
+      "host_tokens": []
+    },
+    "user_view": {
+      "path": "/user/{id}",
+      "host": "",
+      "defaults": {
+        "_menu": "default",
+        "_controller": "App\\Controller\\User\\UserController::view"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [["variable", "/", "[^/]++", "id", true], ["text", "/user"]],
+      "host_tokens": []
+    },
+    "user_edit": {
+      "path": "/user/edit/{id}",
+      "host": "",
+      "defaults": {
+        "_menu": "default",
+        "_controller": "App\\Controller\\User\\UserController::edit"
+      },
+      "requirements": [],
+      "schemes": [],
+      "methods": [],
+      "condition": "",
+      "compiled": null,
+      "tokens": [
+        ["variable", "/", "[^/]++", "id", true],
+        ["text", "/user/edit"]
+      ],
+      "host_tokens": []
+    }
+  },
+  "scheme": "http",
+  "host": "localhost",
+  "base_url": "",
+  "logout_url": null,
+  "logout_path": null
+}
