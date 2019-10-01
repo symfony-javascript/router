@@ -1,4 +1,6 @@
-import Router from '../src';
+import { Router } from '../src';
+import { RouterSettings } from '../dist/router/RouterSettings';
+import { RouteCollection } from '../dist/router/RouteCollection';
 import data from './routes.json';
 
 let router: Router = new Router({ data, forceHttps: true });
