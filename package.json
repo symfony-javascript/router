@@ -1,7 +1,7 @@
 {
-  "name": "symfony-javascript",
+  "name": "@symfony-javascript/router",
   "version": "0.1.0",
-  "description": "Useful Symfony functionnalities in your front-end.",
+  "description": "Font-end router for Symfony",
   "main": "src/index.js",
   "author": {
     "email": "enzo@innocenzi.dev",
