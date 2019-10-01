@@ -1,8 +1,8 @@
 {
   "name": "@symfony-javascript/router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Font-end router for Symfony",
-  "main": "src/index.js",
+  "main": "dist/lib/index.js",
   "author": {
     "email": "enzo@innocenzi.dev",
     "name": "Enzo Innocenzi",
