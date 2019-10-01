@@ -1,8 +1,7 @@
 import Router from '../src';
 import data from './routes.json';
 
-let router: Router;
-router = new Router({ data, forceHttps: true });
+let router: Router = new Router({ data, forceHttps: true });
 
 it('correctly parses a routing file', () => {
     router = new Router({ data, forceHttps: true });
