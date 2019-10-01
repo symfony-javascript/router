@@ -9,7 +9,8 @@
     "url": "https://innocenzi.dev"
   },
   "scripts": {
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "yarn run clean && tsc",
     "test": "jest test",
     "watch": "jest test --watch"
   },
@@ -17,11 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/symfony-javascript/router.git"
   },
-  "keywords": [
-    "symfony",
-    "javascript",
-    "routing"
-  ],
+  "keywords": ["symfony", "javascript", "routing"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/symfony-javascript/router/issues"
