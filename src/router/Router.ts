@@ -61,7 +61,7 @@ export class Router implements RouterInterface {
                   prefix: value[1],
                   regex: value[2],
                   name: value[3],
-                  utf8: JSON.parse(value[4]),
+                  utf8: JSON.parse(value[4] || false),
               });
           } else if ('text' === value[0]) {
               tokens.push({ text: value[1] });
